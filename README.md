@@ -1,4 +1,4 @@
-# Maze Application
+# Maze Backend Api Service
 
 This is a maze controller for a Laravel application that allows users to create mazes, get a list of their created mazes, and find solutions to the mazes.
 
