@@ -1,0 +1,274 @@
+{
+	"info": {
+		"_postman_id": "56e53729-087e-4c44-adc2-0c94bd8993df",
+		"name": "Maze",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17765898"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Happy User",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "happyUser",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "happyuser@demo",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "iTk19!n",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "iTk19!n",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://maze.kemalyazici.com/api/register",
+					"protocol": "https",
+					"host": [
+						"maze",
+						"kemalyazici",
+						"com"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "happyUser",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "iTk19!n",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://maze.kemalyazici.com/api/login",
+					"protocol": "https",
+					"host": [
+						"maze",
+						"kemalyazici",
+						"com"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Maze",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbWF6ZS5kZXZzL2FwaS9sb2dpbiIsImlhdCI6MTY3NTI5MDkyMywiZXhwIjoxNjc1Mjk0NTIzLCJuYmYiOjE2NzUyOTA5MjMsImp0aSI6InFZVnhzc2R4dFpnbmNJU1YiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9._2NHjHH5stedOj5gOBOy0IO-k5Us-KVuG4IqHSvPAzk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"entrance\":\"A1\",\r\n\"gridSize\": \"8x8\",\r\n\"walls\": [\"C1\", \"G1\", \"A2\", \"C2\", \"E2\", \"G2\", \"C3\", \"E3\", \"B4\", \"C4\", \"E4\", \"F4\", \"G4\", \"B5\", \"E5\", \"B6\", \"D6\", \"E6\", \"G6\", \"H6\", \"B7\", \"D7\", \"G7\", \"B8\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://maze.devs/api/maze",
+					"protocol": "http",
+					"host": [
+						"maze",
+						"devs"
+					],
+					"path": [
+						"api",
+						"maze"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Maze",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbWF6ZS5kZXZzL2FwaS9sb2dpbiIsImlhdCI6MTY3NTI5MjU5MCwiZXhwIjoxNjc1Mjk2MTkwLCJuYmYiOjE2NzUyOTI1OTAsImp0aSI6ImgzU3RXazMwRVBqRWx5aFkiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.5XjPhmwqvYZ544a-F8f5R6tC3FL5QMOfXoXvn58AyPE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://maze.devs/api/maze",
+					"protocol": "http",
+					"host": [
+						"maze",
+						"devs"
+					],
+					"path": [
+						"api",
+						"maze"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Shortest path",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL21hemUua2VtYWx5YXppY2kuY29tL2FwaS9sb2dpbiIsImlhdCI6MTY3NTM1NTI2NCwiZXhwIjoxNjc1MzU4ODY0LCJuYmYiOjE2NzUzNTUyNjQsImp0aSI6Ik5tNVpabjRwSHNzVHZiTDQiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.1LAHbBJTZflgPuC33TxP2FlKe0pymqYL5qGI0k7L0nY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://maze.kemalyazici.com/api/maze/1/solution?steps=min",
+					"protocol": "https",
+					"host": [
+						"maze",
+						"kemalyazici",
+						"com"
+					],
+					"path": [
+						"api",
+						"maze",
+						"1",
+						"solution"
+					],
+					"query": [
+						{
+							"key": "steps",
+							"value": "min"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Longest path",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL21hemUua2VtYWx5YXppY2kuY29tL2FwaS9sb2dpbiIsImlhdCI6MTY3NTM1NTI2NCwiZXhwIjoxNjc1MzU4ODY0LCJuYmYiOjE2NzUzNTUyNjQsImp0aSI6Ik5tNVpabjRwSHNzVHZiTDQiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.1LAHbBJTZflgPuC33TxP2FlKe0pymqYL5qGI0k7L0nY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://maze.kemalyazici.com/api/maze/1/solution?steps=max",
+					"protocol": "https",
+					"host": [
+						"maze",
+						"kemalyazici",
+						"com"
+					],
+					"path": [
+						"api",
+						"maze",
+						"1",
+						"solution"
+					],
+					"query": [
+						{
+							"key": "steps",
+							"value": "max"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
