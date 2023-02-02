@@ -2,6 +2,26 @@
 
 This is a maze controller for a Laravel application that allows users to create mazes, get a list of their created mazes, and find solutions to the mazes.
 
+### Installation
+
+Edit .env file
+
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your-db
+DB_USERNAME=username
+DB_PASSWORD=password
+```
+
+Go to your project folder in Terminal screen.
+
+- <code>composer update</code>
+- <code>php artisan migrate</code>
+- <code>php artisan jwt:secret</code>
+
+
 ### Features
 - Middleware for authentication (using auth:api and json)
 - Validation for user input using the Laravel Validator class
